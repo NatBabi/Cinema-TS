@@ -1,0 +1,28 @@
+{
+  "name": "cinema-ticketing-system",
+  "version": "1.0.0",
+  "description": "A comprehensive cinema ticketing platform with Next.js frontend and NestJS backend",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=frontend & npm run dev --workspace=backend",
+    "build": "npm run build --workspace=shared && npm run build --workspace=frontend && npm run build --workspace=backend",
+    "start": "npm start --workspace=backend",
+    "test": "npm test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "clean": "npm run clean --workspaces && rm -rf node_modules"
+  },
+  "keywords": [
+    "cinema",
+    "ticketing",
+    "nextjs",
+    "nestjs",
+    "typescript"
+  ],
+  "author": "NatBabi",
+  "license": "MIT"
+}
